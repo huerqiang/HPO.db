@@ -7,13 +7,13 @@ meta <- data.frame(
          "Human phenotype - mouse phenotype association data",
          "Human phenotype - human disease association data"
      ),
-     BiocVersion = "3.18",
+     BiocVersion = "3.19",
      Genome = NA,
      SourceType = "Multiple",
      SourceUrl = paste("https://hpo.jax.org/app/data/ontology", 
          "https://github.com/mapping-commons/mh_mapping_initiative",
          sep = ","),
-     SourceVersion = "1.2",
+     SourceVersion = "2",
      Species = NA,
      TaxonomyId = NA,
      Coordinate_1_based = TRUE,
@@ -26,6 +26,6 @@ meta <- data.frame(
      ResourceName = "HPO.sqlite",
      Tags = "Annotation"
 )
-write.csv(meta, file="inst/extdata/metadata.csv", row.names=FALSE)
+write.csv(meta, file="inst/extdata/metadata_v2.csv", row.names=FALSE)
 
 
