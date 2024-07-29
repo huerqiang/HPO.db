@@ -17,7 +17,7 @@ Description: Human Phenotype Ontology (HPO) was developed to create a consistent
     semantic information is [missing](https://github.com/YuLab-SMU/DOSE/issues/57). 
     So we developed the new package `HPO.db` for Human Human Phenotype Ontology annotation.
 License: Artistic-2.0
-BugReports: https://github.com/YuLab-SMU/HPO.db/issues
+BugReports: https://github.com/huerqiang/HPO.db/issues
 biocViews: AnnotationData, FunctionalAnnotation, AnnotationHub
 Encoding: UTF-8
 LazyData: false

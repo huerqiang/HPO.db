@@ -9,7 +9,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_parent",
+                tablename="hpo_parent",
                 Lcolname="hpoid",
                 Rcolname="parent"
             )
@@ -21,7 +21,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_children",
+                tablename="hpo_children",
                 Lcolname="hpoid",
                 Rcolname="children"
             )
@@ -33,7 +33,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_ancestor",
+                tablename="hpo_ancestor",
                 Lcolname="hpoid",
                 Rcolname="ancestor"
             )
@@ -45,7 +45,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_offspring",
+                tablename="hpo_offspring",
                 Lcolname="hpoid",
                 Rcolname="offspring"
             )
@@ -57,7 +57,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_term",
+                tablename="hpo_term",
                 Lcolname="hpoid",
                 Rcolname="term"
             )
@@ -68,7 +68,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_alias",
+                tablename="hpo_alias",
                 Lcolname="hpoid",
                 Rcolname="alias"
             )
@@ -79,7 +79,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="do_synonym",
+                tablename="hpo_synonym",
                 Lcolname="hpoid",
                 Rcolname="synonym"
             )
@@ -90,7 +90,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="hpoid_gene",
+                tablename="hpo_gene",
                 Lcolname="hpoid",
                 Rcolname="gene"
             )
@@ -101,7 +101,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="hpoid_doid",
+                tablename="hpo_do",
                 Lcolname="hpoid",
                 Rcolname="doid"
             )
@@ -112,7 +112,7 @@ HPO_DB_AnnDbBimap_seeds <- list(
         Class="AnnDbBimap",
         L2Rchain=list(
             list(
-                tablename="hpoid_mpoid",
+                tablename="hpo_mpo",
                 Lcolname="hpoid",
                 Rcolname="mpoid"
             )
@@ -134,14 +134,14 @@ HPO_DB_AnnDbBimap_seeds <- list(
 createAnnObjs.HPO_DB <- function(prefix, objTarget, dbconn, datacache)
 {
     #Now skip here
-    #checkDBSCHEMA(dbconn, "DO_DB")
+    #checkDBSCHEMA(dbconn, "hpo_DB")
 
     ## AnnDbBimap objects
     seed0 <- list(
         objTarget=objTarget,
         datacache=datacache
     )
-    #ann_objs <- createAnnDbBimaps(DO_DB_AnnDbBimap_seeds, seed0)
+    #ann_objs <- createAnnDbBimaps(hpo_DB_AnnDbBimap_seeds, seed0)
     ann_objs <- createAnnDbBimaps(HPO_DB_AnnDbBimap_seeds, seed0)
 
     ## Reverse maps
